@@ -32,8 +32,15 @@
       "email": "dweiersh@googlemail.com"
     }
   ],
-  "dependencies": {},
+  "scripts": {
+    "test": "clear; mocha --",
+    "test:i": "clear; mocha --inspect-brk --watch --",
+    "test:m": "nodemon -x npm run test --",
+    "test:m:i": "nodemon -x npm run test:i --",
+    "prepublishOnly": "npm run test"  
+  },
   "devDependencies": {
+    "chai": "latest",
     "eslint": "latest",
     "eslint-config-recombix": "latest",
     "eslint-config-vue": "latest",
@@ -43,8 +50,11 @@
     "eslint-plugin-json": "latest",
     "eslint-plugin-node": "latest",
     "eslint-plugin-promise": "latest",
-    "eslint-plugin-vue": "latest"
+    "eslint-plugin-vue": "latest",
+    "mocha": "latest",
+    "nodemon": "latest"
   },
+  "dependencies": {},
   "license": "MIT",
   "engines": {
     "node": ">=6"
