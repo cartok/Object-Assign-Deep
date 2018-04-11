@@ -37,7 +37,7 @@
     "test:i": "clear; mocha --inspect-brk --watch --",
     "test:m": "nodemon -x npm run test --",
     "test:m:i": "nodemon -x npm run test:i --",
-    "prepublishOnly": "npm run test"  
+    "prepublishOnly": "npm run test"
   },
   "devDependencies": {
     "chai": "latest",
