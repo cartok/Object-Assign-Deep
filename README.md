@@ -1,3 +1,6 @@
+# Fork additions:
+* Allows using custom Class instances (the reference of the instance will be passed through).
+
 # Object-Assign-Deep
 Like [Object.assign()](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Object/assign) but deeper. This module is the holy grail of simple object manipulation in JavaScript and it does not resort to using the JSON functions. If you need more power or fine-grained control please take a look at the [Object-Extender](https://npmjs.org/package/object-extender) module.
 

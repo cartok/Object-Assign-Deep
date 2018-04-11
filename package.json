@@ -1,10 +1,10 @@
 {
   "repository": {
     "type": "git",
-    "url": "https://github.com/saikojosh/Object-Assign-Deep.git"
+    "url": "https://github.com/cartok/Object-Assign-Deep.git"
   },
   "bugs": {
-    "url": "https://github.com/saikojosh/Object-Assign-Deep/issues"
+    "url": "https://github.com/cartok/Object-Assign-Deep/issues"
   },
   "name": "object-assign-deep",
   "version": "0.4.0",
@@ -26,6 +26,10 @@
     {
       "name": "Josh Cole",
       "email": "saikojosh@gmail.com"
+    },
+    {
+      "name": "Dennis Weiershäuser",
+      "email": "dweiersh@googlemail.com"
     }
   ],
   "dependencies": {},

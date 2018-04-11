@@ -5,6 +5,35 @@
  * Allows deep cloning of plain objects that contain primitives, nested plain objects, or nested plain arrays.
  */
 
+/**
+ * 
+ * @param {*} value
+ */
+function isObject(value){
+  	let prototypeCount = 0
+    let constructor = value.__proto__
+    while(constructor !== null){
+        prototypeCount++
+        if(prototypeCount > 1){
+            return false
+        }
+        constructor = constructor.__proto__
+    }
+    return prototypeCount === 1
+}
+
+/**
+ * 
+ * @param {*} value 
+ */
+function getClassName(value){
+	if(value instanceof Object){
+	 	return value.__proto__.constructor.name
+	} else {
+		throw new Error(`The parameter can't be a class, it doesn't inherit from Object.`)
+	}
+}
+
 /*
  * A unified way of returning a string that describes the type of the given variable.
  */
@@ -19,7 +48,16 @@ function getTypeOf (input) {
 	}
 
 	else if (typeof input === 'object') {
-		return (Array.isArray(input) ? 'array' : 'object');
+		if(isObject(input)){
+			return 'object'
+		} else {
+			const className = getClassName(input)
+			if(className.toLowerCase() === 'array'){
+				return 'array'
+			} else {
+				return 'class'
+			}
+		}
 	}
 
 	return typeof input;
